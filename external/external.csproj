@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{8CACD1EF-DA5E-4EC0-84F9-D8A0CB752A33}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cs2SharpV1</RootNamespace>
+    <AssemblyName>Cs2SharpV1</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>CS2Sharp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AimBot.cs" />
+    <Compile Include="BoneIndex.cs" />
+    <Compile Include="BoneJointList.cs" />
+    <Compile Include="BoneVo.cs" />
+    <Compile Include="CBoneData.cs" />
+    <Compile Include="CModelState.cs" />
+    <Compile Include="CPlayerWeaponServices.cs" />
+    <Compile Include="CSkeletonInstance.cs" />
+    <Compile Include="C_AttributeContainer.cs" />
+    <Compile Include="C_BasePlayerWeapon.cs" />
+    <Compile Include="C_EconItemView.cs" />
+    <Compile Include="DeviceManager.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="EntityManager.cs" />
+    <Compile Include="LocalPlayer.cs" />
+    <Compile Include="MatchType.cs" />
+    <Compile Include="Matrix44.cs" />
+    <Compile Include="NativeImport.cs" />
+    <Compile Include="OffsetManager.cs" />
+    <Compile Include="ScreenProjection.cs" />
+    <Compile Include="VAMemory.cs" />
+    <Compile Include="WeaponIds.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
